@@ -1,4 +1,4 @@
-using ContactManager.BL;
+﻿using ContactManager.BL;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,15 +18,20 @@ namespace ContactManager.Controllers
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Contact>>> GetAllContacts()
-        {
+       {
             return  await _contactBL.GetAllContacts();
         }
 
+
         [HttpPost]
-        public async Task<Contact> CreateContact(Contact contact)
+        public async Task<Contact> CreateContact([FromBody] Contact contact)
         {
+            // אם הגיע Id זמני/שלילי – מתעלמים כדי שה־DB יקצה Id אמיתי
+            if (contact.Id <= 0) contact.Id = 0;
+
             return await _contactBL.CreateContact(contact);
         }
+
         [HttpDelete]
         public async Task<Contact> DeleteContact(int id)
         {
@@ -34,11 +39,42 @@ namespace ContactManager.Controllers
         }
 
 
-
         [HttpPut]
         public async Task<Contact> EditContact(Contact contact)
         {
             return await _contactBL.EditContact(contact);
         }
+
+
+
+        [HttpPut, Route("syncFromClient")]
+        public async void SyncFromClient(Contact[] Clientcontacts)
+        {
+
+            Contact[] ServerContacts = await _contactBL.GetAllContacts();
+            int maxId = ServerContacts.Any() ? ServerContacts.Max(c => c.Id) : 0;
+
+            foreach (Contact Contact in Clientcontacts)
+            {
+                if(ServerContacts.Any(item=> item.Id == Contact.Id))
+                {
+                    await _contactBL.EditContact(Contact);
+                }
+                else
+                {
+                    maxId++;
+                    Contact.Id = maxId;
+                    await _contactBL.CreateContact(Contact);
+                }
+            }
+            foreach (Contact Contact in ServerContacts)
+            {
+                if (!Clientcontacts.Any(item => item.Id == Contact.Id))
+                {
+                    await _contactBL.DeleteContact(Contact.Id);
+                }
+            }
+        }
+
     }
 }

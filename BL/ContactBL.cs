@@ -21,6 +21,7 @@ namespace ContactManager.BL
         }
         public async Task<Contact> CreateContact(Contact contact)
         {
+
              _context.Contacts.Add(contact);
             _context.SaveChanges();
             return contact;
