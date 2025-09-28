@@ -47,34 +47,37 @@ namespace ContactManager.Controllers
 
 
 
-        [HttpPut, Route("syncFromClient")]
-        public async void SyncFromClient(Contact[] Clientcontacts)
+       [HttpPut, Route("syncFromClient")]
+public async Task<ActionResult<IEnumerable<Contact>>> SyncFromClient([FromBody] Contact[] Clientcontacts)
+{
+    Contact[] ServerContacts = await _contactBL.GetAllContacts();
+    int maxId = ServerContacts.Any() ? ServerContacts.Max(c => c.Id) : 0;
+
+    foreach (Contact Contact in Clientcontacts)
+    {
+        if (ServerContacts.Any(item => item.Id == Contact.Id))
         {
-
-            Contact[] ServerContacts = await _contactBL.GetAllContacts();
-            int maxId = ServerContacts.Any() ? ServerContacts.Max(c => c.Id) : 0;
-
-            foreach (Contact Contact in Clientcontacts)
-            {
-                if(ServerContacts.Any(item=> item.Id == Contact.Id))
-                {
-                    await _contactBL.EditContact(Contact);
-                }
-                else
-                {
-                    maxId++;
-                    Contact.Id = maxId;
-                    await _contactBL.CreateContact(Contact);
-                }
-            }
-            foreach (Contact Contact in ServerContacts)
-            {
-                if (!Clientcontacts.Any(item => item.Id == Contact.Id))
-                {
-                    await _contactBL.DeleteContact(Contact.Id);
-                }
-            }
+            await _contactBL.EditContact(Contact);
         }
+        else
+        {
+            maxId++;
+            Contact.Id = maxId;
+            await _contactBL.CreateContact(Contact);
+        }
+    }
 
+    foreach (Contact Contact in ServerContacts)
+    {
+        if (!Clientcontacts.Any(item => item.Id == Contact.Id))
+        {
+            await _contactBL.DeleteContact(Contact.Id);
+        }
+    }
+
+    // שינוי יחיד: מחזיר את הרשימה כפי שהיא בשרת אחרי הסנכרון
+    var updatedList = await _contactBL.GetAllContacts();
+    return Ok(updatedList);
+}
     }
 }
