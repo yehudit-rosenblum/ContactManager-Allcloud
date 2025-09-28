@@ -1,0 +1,81 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\USER\\Documents\\\u05E4\u05E8\u05D5\u05D9\u05D9\u05E7\u05D8\u05D9\u05DD-\u05DE\u05D8\u05DC\u05D5\u05EA \u05D1\u05D9\u05EA\\AllCloud\\ContactManager\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{54178136-2A7B-4A81-88E1-429D4358FA45}|ContactManager.csproj|c:\\users\\user\\documents\\\u05E4\u05E8\u05D5\u05D9\u05D9\u05E7\u05D8\u05D9\u05DD-\u05DE\u05D8\u05DC\u05D5\u05EA \u05D1\u05D9\u05EA\\allcloud\\contactmanager\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54178136-2A7B-4A81-88E1-429D4358FA45}|ContactManager.csproj|solutionrelative:controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54178136-2A7B-4A81-88E1-429D4358FA45}|ContactManager.csproj|c:\\users\\user\\documents\\\u05E4\u05E8\u05D5\u05D9\u05D9\u05E7\u05D8\u05D9\u05DD-\u05DE\u05D8\u05DC\u05D5\u05EA \u05D1\u05D9\u05EA\\allcloud\\contactmanager\\bl\\contactbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54178136-2A7B-4A81-88E1-429D4358FA45}|ContactManager.csproj|solutionrelative:bl\\contactbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54178136-2A7B-4A81-88E1-429D4358FA45}|ContactManager.csproj|c:\\users\\user\\documents\\\u05E4\u05E8\u05D5\u05D9\u05D9\u05E7\u05D8\u05D9\u05DD-\u05DE\u05D8\u05DC\u05D5\u05EA \u05D1\u05D9\u05EA\\allcloud\\contactmanager\\dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54178136-2A7B-4A81-88E1-429D4358FA45}|ContactManager.csproj|solutionrelative:dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\\u05E4\u05E8\u05D5\u05D9\u05D9\u05E7\u05D8\u05D9\u05DD-\u05DE\u05D8\u05DC\u05D5\u05EA \u05D1\u05D9\u05EA\\AllCloud\\ContactManager\\DAL\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "DAL\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\USER\\Documents\\\u05E4\u05E8\u05D5\u05D9\u05D9\u05E7\u05D8\u05D9\u05DD-\u05DE\u05D8\u05DC\u05D5\u05EA \u05D1\u05D9\u05EA\\AllCloud\\ContactManager\\DAL\\AppDbContext.cs",
+              "RelativeToolTip": "DAL\\AppDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T12:50:50.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ContactBL.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\\u05E4\u05E8\u05D5\u05D9\u05D9\u05E7\u05D8\u05D9\u05DD-\u05DE\u05D8\u05DC\u05D5\u05EA \u05D1\u05D9\u05EA\\AllCloud\\ContactManager\\BL\\ContactBL.cs",
+              "RelativeDocumentMoniker": "BL\\ContactBL.cs",
+              "ToolTip": "C:\\Users\\USER\\Documents\\\u05E4\u05E8\u05D5\u05D9\u05D9\u05E7\u05D8\u05D9\u05DD-\u05DE\u05D8\u05DC\u05D5\u05EA \u05D1\u05D9\u05EA\\AllCloud\\ContactManager\\BL\\ContactBL.cs",
+              "RelativeToolTip": "BL\\ContactBL.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAlwCUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:16:32.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ContactController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\\u05E4\u05E8\u05D5\u05D9\u05D9\u05E7\u05D8\u05D9\u05DD-\u05DE\u05D8\u05DC\u05D5\u05EA \u05D1\u05D9\u05EA\\AllCloud\\ContactManager\\Controllers\\ContactController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ContactController.cs",
+              "ToolTip": "C:\\Users\\USER\\Documents\\\u05E4\u05E8\u05D5\u05D9\u05D9\u05E7\u05D8\u05D9\u05DD-\u05DE\u05D8\u05DC\u05D5\u05EA \u05D1\u05D9\u05EA\\AllCloud\\ContactManager\\Controllers\\ContactController.cs",
+              "RelativeToolTip": "Controllers\\ContactController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAqwA8AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:16:16.921Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
